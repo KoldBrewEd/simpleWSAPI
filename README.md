@@ -3,7 +3,7 @@
 <br/>
 This is an implementation of a simple real-time API based on Websockets where clients are subscribed to a specific channel and any JSON data can be pushed automatically to clients listening/subscribed to the channel. Clients define the channel they're subscribed to and there can be as many channels as required.
 
-The GraphQL API is defined in code where a GraphQL schema and API definition is generated programatically. Client code is also automatically generated. No GraphQL schema, queries, mutations, subscriptions are required.
+The GraphQL API is defined in code where a GraphQL schema and API definition is generated [programatically](https://docs.aws.amazon.com/cdk/api/latest/docs/aws-appsync-readme.html#code-first-schema). Client code is also automatically generated. No GraphQL schema, queries, mutations, subscriptions are required.
 <br/>
 <br/>
 ## Requirements
