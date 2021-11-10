@@ -17,25 +17,25 @@ The GraphQL API is defined in code where a GraphQL schema and API definition is 
 <br/>
 ## Deploy the API to the cloud
 
-1. Clone the project to your local working directory
+1. Clone the project to your local working directory:
 
    ```sh
    git clone https://github.com/awsed/simpleWSAPI
    ```
 
-2. Change the working directory to this pattern's directory
+2. Change the working directory to:
 
    ```sh
    cd simpleWSAPI/cdk
    ```
 
-3. Install the project dependencies
+3. Install the project dependencies:
 
    ```sh
    npm install
    ```
 
-4. Deploy the stack to your default AWS account and region. The output of this command shows the GraphQL API endpoint, API ID, and API key. Take note of all the details as they'll be needed to setup the client.
+4. Deploy the stack to your default AWS account and region. After deployment, the output of this command shows the GraphQL API endpoint, API ID, and API key. Take note of all the details as they'll be needed to setup the client:
 
    ```sh
    cdk deploy
@@ -45,13 +45,13 @@ The GraphQL API is defined in code where a GraphQL schema and API definition is 
 
 ## Configure the React.js client
 
-1. Change the working directory to this pattern's directory
+1. Change the working directory to this pattern's directory:
 
    ```sh
    cd ../client
    ```
 
-2. Install the project dependencies
+2. Install the project dependencies:
 
    ```sh
    npm install
