@@ -1,7 +1,9 @@
-# Simple Serverless Real-Time API (WebSockets) with AWS AppSync
+# Simple Serverless Real-Time API (WebSockets) with AWS AppSync 
 ### (No GraphQL knowledge required)
  
-This is an implementation of a simple real-time API based on Websockets where clients are subscribed to a specific channel and any JSON data can be pushed automatically to clients listening/subscribed to the channel.
+This is an implementation of a simple real-time API based on Websockets where clients are subscribed to a specific channel and any JSON data can be pushed automatically to clients listening/subscribed to the channel. Clients define the channel they're subscribed to and there can be as many channels as required.
+
+The GraphQL API is defined in code where a GraphQL schema and API definition is generated programatically. Client code is also automatically generated.
 
 ## Requirements
 
