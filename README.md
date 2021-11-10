@@ -1,10 +1,11 @@
-# Simple Serverless Real-Time API (WebSockets) with AWS AppSync 
+# Simple Serverless Real-Time API (WebSockets)<br/> with AWS AppSync 
 ### (No GraphQL knowledge required)
- 
+<br/>
 This is an implementation of a simple real-time API based on Websockets where clients are subscribed to a specific channel and any JSON data can be pushed automatically to clients listening/subscribed to the channel. Clients define the channel they're subscribed to and there can be as many channels as required.
 
-The GraphQL API is defined in code where a GraphQL schema and API definition is generated programatically. Client code is also automatically generated.
-
+The GraphQL API is defined in code where a GraphQL schema and API definition is generated programatically. Client code is also automatically generated. No GraphQL schema, queries, mutations, subscriptions are required.
+<br/>
+<br/>
 ## Requirements
 
 * [Create an AWS account](https://portal.aws.amazon.com/gp/aws/developer/registration/index.html) if you do not already have one and log in. The IAM user that you use must have sufficient permissions to make necessary AWS service calls and manage AWS resources.
@@ -12,8 +13,8 @@ The GraphQL API is defined in code where a GraphQL schema and API definition is 
 * [Node and NPM](https://nodejs.org/en/download/) installed
 * [AWS Cloud Development Kit](https://docs.aws.amazon.com/cdk/latest/guide/cli.html) (AWS CDK) installed
 * [Amplify CLI](https://docs.amplify.aws/cli/start/install/), only required to generate code as the backend deployment is done via AWS CDK
-
-
+<br/>
+<br/>
 ## Deploy the API to the cloud
 
 1. Clone the project to your local working directory
@@ -39,6 +40,8 @@ The GraphQL API is defined in code where a GraphQL schema and API definition is 
    ```sh
    cdk deploy
    ```
+<br/>
+<br/> 
 
 ## Configure the React.js client
 
