@@ -57,7 +57,7 @@ The GraphQL API is defined in code where a GraphQL schema and API definition is 
 
 4. Define a [name for your channel](https://github.com/awsed/simpleWSAPI/blob/68bc0846dc2edb5e13a75767a060153e37ceeaee/client/src/App.js#L22), an an optional step.
 
-5. Generate the necessary code to interact with the API with [CodeGen](https://docs.amplify.aws/cli/graphql-transformer/codegen/) using the API ID output of the previous `cdk deploy`. There's no need to create an Amplify CLI project, however you'll need to download your API schema from the AWS Appsync Console and copy the schema file to the root of the `client` folder, where you need to execute the following command accepting all defaults:
+5. Generate the necessary code to interact with the API with [CodeGen](https://docs.amplify.aws/cli/graphql-transformer/codegen/) using the API ID output of the previous `cdk deploy`. There's no need to create an Amplify CLI project, however you'll need to download your API schema from the [AWS Appsync Console](https://console.aws.amazon.com/appsync/home), select the API `WS-API` and, in the Schema section, select **Export schema**, download copy the schema file to the root of the `/client` folder, where you need to execute the following command accepting all defaults:
 
    ```sh
    amplify add codegen --apiId xxxxxxxxxxxxxxxxxxxxxx
