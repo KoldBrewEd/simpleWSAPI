@@ -76,5 +76,7 @@ The GraphQL API is defined in code where a GraphQL schema and API definition is 
     ```
 
 7. Send any valid JSON payload from one client and get it broadcasted in all browser windows. Since AWS AppSync automatically scales to demand, you can have thousands of clients broadcasting JSON data. You can also have multiple [channels](https://github.com/awsed/simpleWSAPI/blob/68bc0846dc2edb5e13a75767a060153e37ceeaee/client/src/App.js#L22) defined in different instances of the clients and confirm only clients subscribed to specific channels receive the JSON data. 
+<br/>
+<br/>
 
 ![Screnshot](simple-wsapi.gif)
