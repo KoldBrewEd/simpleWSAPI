@@ -1,7 +1,7 @@
 # Simple Serverless Real-Time API (WebSockets)<br/> with AWS AppSync 
 ### (No GraphQL knowledge required)
 <br/>
-This is an implementation of a simple real-time API based on Websockets where clients are subscribed to a specific channel and any JSON data can be pushed automatically to clients listening/subscribed to the channel. Clients define the channel they're subscribed to and there can be as many channels as required.
+This is an implementation of a simple real-time API based on WebSockets where clients are subscribed to a specific channel and any JSON data can be pushed automatically to clients listening/subscribed to the channel. Clients define the channel they're subscribed to and there can be as many channels as required.
 
 <br/>
 
