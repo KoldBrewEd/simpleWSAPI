@@ -7,6 +7,7 @@ This is an implementation of a simple real-time API based on WebSockets where cl
 The GraphQL API is defined in code where a GraphQL schema and API definition is generated [programatically](https://docs.aws.amazon.com/cdk/api/latest/docs/aws-appsync-readme.html#code-first-schema). Client code is also automatically generated. Hand coding GraphQL schema, queries, mutations, subscriptions is not required. If there's no need to leverage the built-in GraphQL strongly typed system, this pattern allows to send any data as long as it's in a valid JSON format.
 <br/>
 <br/>
+
 ## Requirements
 
 * [Create an AWS account](https://portal.aws.amazon.com/gp/aws/developer/registration/index.html) if you do not already have one and log in. The IAM user that you use must have sufficient permissions to make necessary AWS service calls and manage AWS resources.
@@ -16,6 +17,7 @@ The GraphQL API is defined in code where a GraphQL schema and API definition is 
 * [Amplify CLI](https://docs.amplify.aws/cli/start/install/), only required to generate code as the backend deployment is done via AWS CDK
 <br/>
 <br/>
+
 ## Deploy the API to the cloud
 
 1. Clone the project to your local working directory:
