@@ -29,7 +29,7 @@ export class CdkStack extends cdk.Stack {
 
     api.addMutation('publish2channel', new ResolvableField({
       returnType: channel.attribute(),
-      args: { name: GraphqlType.string({ isRequired: true }) , data: GraphqlType.awsJson({ isRequired: true })  },
+      args: { name: GraphqlType.string({ isRequired: true }), data: GraphqlType.awsJson({ isRequired: true }) },
       dataSource: api.addNoneDataSource('pubsub'),
       requestMappingTemplate: MappingTemplate.fromString(`
         {
@@ -53,6 +53,6 @@ export class CdkStack extends cdk.Stack {
     new cdk.CfnOutput(this, 'apiKey', { value: api.apiKey! })
     new cdk.CfnOutput(this, 'apiId', { value: api.apiId })
     new cdk.CfnOutput(this, 'region', { value: this.region })
-  
-}
+
+  }
 }
