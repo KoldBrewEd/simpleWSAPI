@@ -49,7 +49,7 @@ The GraphQL API is defined in code where a GraphQL schema and API definition is 
 
 ## Configure the React.js client
 
-1. Change the working directory to this pattern's directory:
+1. Change the working directory to the `client` folder:
 
    ```sh
    cd ../client
