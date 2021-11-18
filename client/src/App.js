@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
-import React, { useState } from "react";
+import React, { useEffect,useState } from "react";
 import Amplify, { API, graphqlOperation } from "aws-amplify";
 import * as subscriptions from "./graphql/subscriptions"; //codegen generated code
 import * as mutations from "./graphql/mutations"; //codegen generated code
@@ -19,9 +19,11 @@ Amplify.configure(myAppConfig);
 function App() {
   const [send, setSend] = useState("");
   const [received, setReceived] = useState("");
+
   //Define the channel name here
   let channel = "robots";
   let data = "";
+
   //Publish data to subscribed clients
   async function handleSubmit(evt) {
     evt.preventDefault();
@@ -29,25 +31,30 @@ function App() {
     const publish = await API.graphql(
       graphqlOperation(mutations.publish2channel, { name: channel, data: send })
     );
-    setSend("Enter valid JSON here...");
+    setSend("Enter valid JSON here... (use quotes for keys and values)");
   }
-  //Subscribe via WebSockets
-  const subscription = API.graphql(
-    graphqlOperation(subscriptions.subscribe2channel, { name: channel })
-  ).subscribe({
-    next: ({ provider, value }) => {
-      setReceived(value.data.subscribe2channel.data);
-    },
-    error: (error) => console.warn(error),
-  });
+
+  useEffect(() => {
+    //Subscribe via WebSockets
+    const subscription = API.graphql(
+      graphqlOperation(subscriptions.subscribe2channel, { name: channel })
+    ).subscribe({
+      next: ({ provider, value }) => {
+        setReceived(value.data.subscribe2channel.data);
+      },
+      error: (error) => console.warn(error),
+    });
+    return () => subscription.unsubscribe();
+  }, [channel]);
+
   if (received) {
     data = JSON.parse(received);
   }
+
   //Display pushed data on browser
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>Send/Push JSON to channel "{channel}"...</p>
         <form onSubmit={handleSubmit}>
           <textarea
